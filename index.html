@@ -1,154 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Muhammad Maruf | Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+   <link rel="stylesheet" href="style.css"/>
 </head>
-<body>
+<body class="bg-slate-50 dark:bg-[#020617] text-slate-900 dark:text-slate-100 transition-colors duration-500 overflow-x-hidden">
 
-<header class="container hero">
-  <!-- PROFILE PICTURE -->
-  <img src="assets/profile.jpg" alt="Muhammad Maruf" class="profile-pic"/>
+  <div class="blob top-0 -left-20"></div>
+  <div class="blob bottom-0 -right-20 bg-indigo-500"></div>
 
-  <h1 data-en="Muhammad Maruf" data-id="Muhammad Maruf">Muhammad Maruf</h1>
-
-  <p class="subtitle"
-     data-en="Machine Learning • Data Science • Backend • Web Development"
-     data-id="Machine Learning • Data Science • Backend • Web Development">
-     Machine Learning • Data Science • Backend • Web Development
-  </p>
-
-  <div class="contact">
-    <a href="mailto:muhmaruf354@gmail.com">📧 muhmaruf354@gmail.com</a>
-    <a href="https://www.linkedin.com/in/muhammad-ma-ruf-100703235/" target="_blank">🔗 LinkedIn</a>
-    <a href="https://github.com/notfound313" target="_blank">💻 GitHub</a>
-  </div>
-
-  <!-- ACTION BUTTONS -->
-  <div class="actions">
-    <a href="assets/Kirana_CV.pdf" class="btn" download>⬇ Download CV</a>
-    <button class="btn outline" onclick="toggleLanguage()">EN / ID</button>
-    <button class="btn outline" onclick="toggleTheme()">🌙 / ☀️</button>
-  </div>
-</header>
-
-<!-- LINKEDIN PREVIEW -->
-<section class="container slide-up">
-  <h2 data-en="LinkedIn Preview" data-id="Pratinjau LinkedIn">Pratinjau LinkedIn</h2>
-
-  <a class="linkedin-card" href="https://www.linkedin.com/in/muhammad-ma-ruf-100703235/" target="_blank">
-    <h3>Kirana</h3>
-    <p>Machine Learning | Data Science | Backend Developer</p>
-    <span>https://www.linkedin.com/in/muhammad-ma-ruf-100703235/</span>
-  </a>
-</section>
-
-<!-- ABOUT -->
-<section class="container">
-  <h2 data-en="About Me" data-id="Tentang Saya">Tentang Saya</h2>
-  <p
-    data-en="I am a developer with a strong interest in Machine Learning, Data Science, and Backend Development. I enjoy building data-driven applications, RESTful APIs, and scalable web systems."
-    data-id="Saya adalah seorang developer dengan minat kuat pada Machine Learning, Data Science, dan Backend Development. Saya terbiasa membangun aplikasi berbasis data, REST API, dan sistem web yang scalable.">
-    Saya adalah seorang developer dengan minat kuat pada Machine Learning, Data Science, dan Backend Development. Saya terbiasa membangun aplikasi berbasis data, REST API, dan sistem web yang scalable.
-  </p>
-  <p><strong data-en="University:" data-id="Universitas:">University:</strong> Universitas Amikom Purwokerto</p>
-</section>
-
-<!-- PROJECTS -->
-<section class="container slide-up">
-  <h2 data-en="Projects" data-id="Proyek">Proyek</h2>
-
-  <!-- ML & DATA SCIENCE -->
-  <h3 class="section-title" data-en="Machine Learning & Data Science" data-id="Machine Learning & Data Science">Machine Learning & Data Science</h3>
-
-  <div class="project-grid">
-
-    <div class="card hover">
-      <img src="assets/name-recommender.png" class="project-img" onclick="openModal(this.src)" />
-      <h4>Name Recommender Web App</h4>
-      <p data-en="Recommends character names based on descriptions using NLP."
-         data-id="Merekomendasikan nama karakter berdasarkan deskripsi menggunakan NLP.">Merekomendasikan nama karakter berdasarkan deskripsi menggunakan NLP.</p>
-      <p class="tech">Python • NLP • Recommendation System</p>
-      <a href="https://github.com/notfound313/recomm-name-web-app" target="_blank">GitHub →</a>
+  <nav class="fixed top-0 w-full z-50 glass py-4">
+    <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+      <span class="font-bold text-xl tracking-tighter">M.MARUF</span>
+      <div class="flex gap-4">
+        <button onclick="toggleLanguage()" class="hover:text-sky-400 transition-colors">EN/ID</button>
+        <button onclick="toggleTheme()" class="p-2 rounded-full bg-slate-200 dark:bg-slate-800">
+            <i data-lucide="sun" class="hidden dark:block w-5 h-5"></i>
+            <i data-lucide="moon" class="block dark:hidden w-5 h-5"></i>
+        </button>
+      </div>
     </div>
+  </nav>
 
-    <div class="card hover">
-      <img src="assets/student-predictor.png" class="project-img" onclick="openModal(this.src)" />
-      <h4>Student Performance Predictor</h4>
-      <p data-en="Predicts students at risk using machine learning and dashboard."
-         data-id="Memprediksi mahasiswa berisiko menggunakan machine learning dan dashboard.">Memprediksi mahasiswa berisiko menggunakan machine learning dan dashboard.</p>
-      <p class="tech">EDA • Machine Learning • Streamlit</p>
-      <a href="https://studentperformence-notfound404.streamlit.app/" target="_blank">Live Demo →</a>
+  <header class="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-20">
+    <div data-aos="zoom-in" class="relative mb-6">
+      <div class="absolute inset-0 bg-sky-400 blur-2xl opacity-20 rounded-full animate-pulse"></div>
+      <img src="assets/profile.jpg" alt="Maruf" class="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-sky-500/50 shadow-2xl"/>
     </div>
+    
+    <h1 data-aos="fade-up" class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">
+        <span data-en="Muhammad Maruf" data-id="Muhammad Maruf">Muhammad Maruf</span>
+    </h1>
+    
+    <p data-aos="fade-up" data-aos-delay="100" class="text-lg md:text-xl text-slate-500 dark:text-slate-400 max-w-2xl mb-8">
+        <span class="gradient-text font-semibold uppercase tracking-widest text-sm block mb-2">Portfolio 2026</span>
+        <span data-en="Machine Learning • Data Science • Backend • Web Development" 
+              data-id="Machine Learning • Data Science • Backend • Web Development">
+            Machine Learning • Data Science • Backend • Web Development
+        </span>
+    </p>
 
-  </div>
-
-  <!-- BACKEND -->
-  <h3 class="section-title" data-en="Backend Development" data-id="Backend Development">Backend Development</h3>
-
-  <div class="project-grid">
-
-    <div class="card hover">
-      <img src="assets/forum-api.png" class="project-img" onclick="openModal(this.src)" />
-      <h4>Forum API</h4>
-      <p data-en="RESTful forum backend built with TDD and clean architecture."
-         data-id="Backend forum RESTful dengan pendekatan TDD dan clean architecture.">Backend forum RESTful dengan pendekatan TDD dan clean architecture.</p>
-      <p class="tech">Node.js • REST API • TDD</p>
-      <a href="https://github.com/notfound313/forum_api" target="_blank">GitHub →</a>
+    <div data-aos="fade-up" data-aos-delay="200" class="flex flex-wrap justify-center gap-4">
+      <a href="mailto:muhmaruf354@gmail.com" class="flex items-center gap-2 px-6 py-3 bg-sky-500 hover:bg-sky-600 text-white rounded-xl transition-all shadow-lg shadow-sky-500/20">
+        <i data-lucide="mail" class="w-4 h-4"></i> Email Me
+      </a>
+      <a href="assets/Kirana_CV.pdf" download class="flex items-center gap-2 px-6 py-3 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-all">
+        <i data-lucide="download" class="w-4 h-4"></i> Download CV
+      </a>
     </div>
+  </header>
 
-    <div class="card hover">
-      <img src="assets/openmusic-api.png" class="project-img" onclick="openModal(this.src)" />
-      <h4>Open Music API</h4>
-      <p data-en="API for music upload, playlist management, and likes."
-         data-id="API untuk upload lagu, manajemen playlist, dan like album.">API untuk upload lagu, manajemen playlist, dan like album.</p>
-      <p class="tech">Node.js • Auth • Database</p>
-      <a href="https://github.com/notfound313/api-openmusic" target="_blank">GitHub →</a>
+  <section class="max-w-4xl mx-auto px-6 py-24" data-aos="fade-up">
+    <div class="glass p-8 md:p-12 rounded-3xl relative overflow-hidden">
+        <h2 class="text-3xl font-bold mb-6 flex items-center gap-3" data-en="About Me" data-id="Tentang Saya">Tentang Saya</h2>
+        <p class="text-lg leading-relaxed text-slate-600 dark:text-slate-300 mb-6"
+           data-en="I am a developer with a strong interest in Machine Learning, Data Science, and Backend Development. I enjoy building data-driven applications and scalable web systems."
+           data-id="Saya adalah seorang developer dengan minat kuat pada Machine Learning, Data Science, dan Backend Development. Saya terbiasa membangun aplikasi berbasis data dan sistem web yang scalable.">
+           Saya adalah seorang developer dengan minat kuat pada Machine Learning, Data Science, dan Backend Development. Saya terbiasa membangun aplikasi berbasis data dan sistem web yang scalable.
+        </p>
+        <div class="flex items-center gap-2 text-sky-500 font-semibold">
+            <i data-lucide="graduation-cap"></i>
+            <span>Universitas Amikom Purwokerto</span>
+        </div>
     </div>
+  </section>
 
-  </div>
+  <section class="max-w-6xl mx-auto px-6 py-24">
+    <h2 class="text-4xl font-bold mb-16 text-center" data-en="Featured Projects" data-id="Proyek Unggulan">Proyek Unggulan</h2>
 
-  <!-- WEB -->
-  <h3 class="section-title" data-en="Web Development" data-id="Web Development">Web Development</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <div data-aos="fade-up" class="group relative glass p-4 rounded-2xl hover:scale-[1.02] transition-transform duration-300">
+        <div class="overflow-hidden rounded-xl mb-4">
+            <img src="assets/student-predictor.png" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+        </div>
+        <span class="text-xs font-bold text-sky-400 uppercase tracking-widest">ML & Data Science</span>
+        <h4 class="text-xl font-bold mt-2">Student Performance Predictor</h4>
+        <p class="text-sm text-slate-500 my-3" data-en="Predicts students at risk using machine learning." data-id="Memprediksi mahasiswa berisiko menggunakan machine learning.">Memprediksi mahasiswa berisiko menggunakan machine learning.</p>
+        <div class="flex gap-2 mb-4 flex-wrap">
+            <span class="px-3 py-1 text-[10px] bg-slate-200 dark:bg-slate-800 rounded-full">Streamlit</span>
+            <span class="px-3 py-1 text-[10px] bg-slate-200 dark:bg-slate-800 rounded-full">Python</span>
+        </div>
+        <a href="#" class="text-sky-400 font-bold flex items-center gap-1 group-hover:gap-3 transition-all">Demo <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      </div>
 
-  <div class="project-grid">
+      <div data-aos="fade-up" data-aos-delay="100" class="group relative glass p-4 rounded-2xl hover:scale-[1.02] transition-transform duration-300">
+        <div class="overflow-hidden rounded-xl mb-4">
+            <img src="assets/forum-api.png" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+        </div>
+        <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">Backend</span>
+        <h4 class="text-xl font-bold mt-2">Forum REST API</h4>
+        <p class="text-sm text-slate-500 my-3" data-en="Built with TDD and clean architecture." data-id="Dibangun dengan TDD dan clean architecture.">Dibangun dengan TDD dan clean architecture.</p>
+        <div class="flex gap-2 mb-4">
+            <span class="px-3 py-1 text-[10px] bg-slate-200 dark:bg-slate-800 rounded-full">Node.js</span>
+            <span class="px-3 py-1 text-[10px] bg-slate-200 dark:bg-slate-800 rounded-full">PostgreSQL</span>
+        </div>
+        <a href="#" class="text-indigo-400 font-bold flex items-center gap-1 group-hover:gap-3 transition-all">GitHub <i data-lucide="github" class="w-4 h-4"></i></a>
+      </div>
 
-    <div class="card hover">
-      <img src="assets/task-management.png" class="project-img" onclick="openModal(this.src)" />
-      <h4>Task Management System</h4>
-      <p data-en="Role-based task management system for supervisors and staff."
-         data-id="Sistem manajemen tugas berbasis role untuk supervisor dan staf.">Sistem manajemen tugas berbasis role untuk supervisor dan staf.</p>
-      <p class="tech">Laravel • RBAC • MVC</p>
-      <a href="https://github.com/notfound313/wps_inter_maruf" target="_blank">GitHub →</a>
+      <div data-aos="fade-up" data-aos-delay="200" class="group relative glass p-4 rounded-2xl hover:scale-[1.02] transition-transform duration-300">
+        <div class="overflow-hidden rounded-xl mb-4">
+            <img src="assets/task-management.png" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+        </div>
+        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest">Web Development</span>
+        <h4 class="text-xl font-bold mt-2">Task Management</h4>
+        <p class="text-sm text-slate-500 my-3" data-en="Role-based system for supervisors." data-id="Sistem berbasis role untuk supervisor.">Sistem berbasis role untuk supervisor.</p>
+        <div class="flex gap-2 mb-4">
+            <span class="px-3 py-1 text-[10px] bg-slate-200 dark:bg-slate-800 rounded-full">Laravel</span>
+            <span class="px-3 py-1 text-[10px] bg-slate-200 dark:bg-slate-800 rounded-full">MySQL</span>
+        </div>
+        <a href="#" class="text-emerald-400 font-bold flex items-center gap-1 group-hover:gap-3 transition-all">View <i data-lucide="external-link" class="w-4 h-4"></i></a>
+      </div>
+
     </div>
+  </section>
 
-  </div>
+  <footer class="py-12 border-t border-slate-200 dark:border-slate-800 text-center text-slate-500 text-sm">
+    <p>© 2026 Muhammad Maruf • Built with Tailwind & Passion</p>
+  </footer>
 
-  <!-- GAME -->
-  <h3 class="section-title" data-en="Game Development" data-id="Game Development">Game Development</h3>
-
-  <div class="project-grid">
-
-    <div class="card hover">
-      <img src="assets/battleship-cli.png" class="project-img" onclick="openModal(this.src)" />
-      <h4>Battleship CLI Game</h4>
-      <p data-en="Two-player battleship game in command line using OOP."
-         data-id="Game battleship dua pemain berbasis CLI menggunakan OOP.">Game battleship dua pemain berbasis CLI menggunakan OOP.</p>
-      <p class="tech">C# • OOP • CLI</p>
-      <a href="https://github.com/notfound313/battle-ship" target="_blank">GitHub →</a>
-    </div>
-
-  </div>
-
-</section>
-
-
-<footer>
-  <p>© 2026 Muhammad Maruf • Portfolio</p>
-</footer>
-
-<script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js">   
+  </script>
 </body>
 </html>

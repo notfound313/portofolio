@@ -28,3 +28,7 @@ function openModal(src) {
 function closeModal() {
   document.getElementById("modal").style.display = "none";
 }
+
+// Initialize Animations
+AOS.init({ duration: 1000, once: true });
+lucide.createIcons();
