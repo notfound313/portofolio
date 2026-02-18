@@ -1,11 +1,19 @@
-let currentLang = "id"; // DEFAULT INDONESIA
+let currentLang = "id"; // default Indonesia
 
-function toggleLanguage() {
-  currentLang = currentLang === "id" ? "en" : "id";
+function applyLanguage() {
   document.querySelectorAll("[data-en]").forEach(el => {
     el.textContent = el.dataset[currentLang];
   });
 }
+
+function toggleLanguage() {
+  currentLang = currentLang === "id" ? "en" : "id";
+  applyLanguage();
+}
+
+document.addEventListener("DOMContentLoaded", applyLanguage);
+
+
 
 function toggleTheme() {
   const html = document.documentElement;
