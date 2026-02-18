@@ -50,7 +50,7 @@
       <a href="mailto:muhmaruf354@gmail.com" class="flex items-center gap-2 px-6 py-3 bg-sky-500 hover:bg-sky-600 text-white rounded-xl transition-all shadow-lg shadow-sky-500/20">
         <i data-lucide="mail" class="w-4 h-4"></i> Email Me
       </a>
-      <a href="assets/Kirana_CV.pdf" download class="flex items-center gap-2 px-6 py-3 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-all">
+      <a href="assets/muhammad_maruf_cv.pdf" download class="flex items-center gap-2 px-6 py-3 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-all">
         <i data-lucide="download" class="w-4 h-4"></i> Download CV
       </a>
     </div>
@@ -71,55 +71,131 @@
     </div>
   </section>
 
-  <section class="max-w-6xl mx-auto px-6 py-24">
-    <h2 class="text-4xl font-bold mb-16 text-center" data-en="Featured Projects" data-id="Proyek Unggulan">Proyek Unggulan</h2>
+<section id="projects" class="max-w-6xl mx-auto px-6 py-24">
+  <div class="text-center mb-16" data-aos="fade-up">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-4" data-en="Complete Project Showcase" data-id="Koleksi Proyek Lengkap">Koleksi Proyek Lengkap</h2>
+    <p class="text-slate-500 dark:text-slate-400" data-en="A detailed look at my technical journey." data-id="Detail perjalanan teknis dan karya yang telah saya bangun.">Detail perjalanan teknis dan karya yang telah saya bangun.</p>
+  </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div class="mb-20">
+    <h3 class="flex items-center gap-3 text-2xl font-bold mb-8 text-sky-500" data-aos="fade-right">
+      <i data-lucide="brain-circuit"></i> Machine Learning & Data Science
+    </h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       
-      <div data-aos="fade-up" class="group relative glass p-4 rounded-2xl hover:scale-[1.02] transition-transform duration-300">
-        <div class="overflow-hidden rounded-xl mb-4">
-            <img src="assets/student-predictor.png" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+      <div data-aos="fade-up" class="group glass p-6 rounded-3xl hover:border-sky-500/50 transition-all duration-500">
+        <div class="relative overflow-hidden rounded-2xl mb-6">
+          <img src="assets/student-predictor.png" alt="Student Predictor" class="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-700" />
+          <div class="absolute top-4 right-4 bg-sky-500 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg">LIVE</div>
         </div>
-        <span class="text-xs font-bold text-sky-400 uppercase tracking-widest">ML & Data Science</span>
-        <h4 class="text-xl font-bold mt-2">Student Performance Predictor</h4>
-        <p class="text-sm text-slate-500 my-3" data-en="Predicts students at risk using machine learning." data-id="Memprediksi mahasiswa berisiko menggunakan machine learning.">Memprediksi mahasiswa berisiko menggunakan machine learning.</p>
-        <div class="flex gap-2 mb-4 flex-wrap">
-            <span class="px-3 py-1 text-[10px] bg-slate-200 dark:bg-slate-800 rounded-full">Streamlit</span>
-            <span class="px-3 py-1 text-[10px] bg-slate-200 dark:bg-slate-800 rounded-full">Python</span>
+        <h4 class="text-xl font-bold mb-2">Student Performance Predictor</h4>
+        <p class="text-slate-500 dark:text-slate-400 text-sm mb-6" data-en="Predicts students at risk using ML and an interactive dashboard." data-id="Memprediksi mahasiswa berisiko menggunakan ML dan dashboard interaktif.">Memprediksi mahasiswa berisiko menggunakan ML dan dashboard interaktif.</p>
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="px-3 py-1 bg-sky-500/10 text-sky-500 text-xs rounded-lg font-medium">Streamlit</span>
+          <span class="px-3 py-1 bg-sky-500/10 text-sky-500 text-xs rounded-lg font-medium">Python</span>
         </div>
-        <a href="#" class="text-sky-400 font-bold flex items-center gap-1 group-hover:gap-3 transition-all">Demo <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        <a href="https://studentperformence-notfound404.streamlit.app/" target="_blank" class="inline-flex items-center gap-2 text-sky-500 font-bold hover:gap-4 transition-all">Live Demo <i data-lucide="external-link" class="w-4 h-4"></i></a>
       </div>
 
-      <div data-aos="fade-up" data-aos-delay="100" class="group relative glass p-4 rounded-2xl hover:scale-[1.02] transition-transform duration-300">
-        <div class="overflow-hidden rounded-xl mb-4">
-            <img src="assets/forum-api.png" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+      <div data-aos="fade-up" data-aos-delay="100" class="group glass p-6 rounded-3xl hover:border-indigo-500/50 transition-all duration-500">
+        <div class="relative overflow-hidden rounded-2xl mb-6">
+          <img src="assets/name-recommender.png" alt="Name Recommender" class="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-700" />
         </div>
-        <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">Backend</span>
-        <h4 class="text-xl font-bold mt-2">Forum REST API</h4>
-        <p class="text-sm text-slate-500 my-3" data-en="Built with TDD and clean architecture." data-id="Dibangun dengan TDD dan clean architecture.">Dibangun dengan TDD dan clean architecture.</p>
-        <div class="flex gap-2 mb-4">
-            <span class="px-3 py-1 text-[10px] bg-slate-200 dark:bg-slate-800 rounded-full">Node.js</span>
-            <span class="px-3 py-1 text-[10px] bg-slate-200 dark:bg-slate-800 rounded-full">PostgreSQL</span>
+        <h4 class="text-xl font-bold mb-2">Name Recommender Web App</h4>
+        <p class="text-slate-500 dark:text-slate-400 text-sm mb-6" data-en="Recommends character names based on descriptions using NLP." data-id="Merekomendasikan nama karakter berdasarkan deskripsi menggunakan NLP.">Merekomendasikan nama karakter berdasarkan deskripsi menggunakan NLP.</p>
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="px-3 py-1 bg-indigo-500/10 text-indigo-500 text-xs rounded-lg font-medium">NLP</span>
+          <span class="px-3 py-1 bg-indigo-500/10 text-indigo-500 text-xs rounded-lg font-medium">Python</span>
         </div>
-        <a href="#" class="text-indigo-400 font-bold flex items-center gap-1 group-hover:gap-3 transition-all">GitHub <i data-lucide="github" class="w-4 h-4"></i></a>
+        <a href="https://github.com/notfound313/recomm-name-web-app" target="_blank" class="inline-flex items-center gap-2 text-indigo-500 font-bold hover:gap-4 transition-all">GitHub <i data-lucide="github" class="w-4 h-4"></i></a>
       </div>
-
-      <div data-aos="fade-up" data-aos-delay="200" class="group relative glass p-4 rounded-2xl hover:scale-[1.02] transition-transform duration-300">
-        <div class="overflow-hidden rounded-xl mb-4">
-            <img src="assets/task-management.png" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
-        </div>
-        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest">Web Development</span>
-        <h4 class="text-xl font-bold mt-2">Task Management</h4>
-        <p class="text-sm text-slate-500 my-3" data-en="Role-based system for supervisors." data-id="Sistem berbasis role untuk supervisor.">Sistem berbasis role untuk supervisor.</p>
-        <div class="flex gap-2 mb-4">
-            <span class="px-3 py-1 text-[10px] bg-slate-200 dark:bg-slate-800 rounded-full">Laravel</span>
-            <span class="px-3 py-1 text-[10px] bg-slate-200 dark:bg-slate-800 rounded-full">MySQL</span>
-        </div>
-        <a href="#" class="text-emerald-400 font-bold flex items-center gap-1 group-hover:gap-3 transition-all">View <i data-lucide="external-link" class="w-4 h-4"></i></a>
-      </div>
-
     </div>
-  </section>
+  </div>
+
+  <div class="mb-20">
+    <h3 class="flex items-center gap-3 text-2xl font-bold mb-8 text-emerald-500" data-aos="fade-right">
+      <i data-lucide="server"></i> Backend Development
+    </h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <div data-aos="fade-up" class="group glass p-6 rounded-3xl border-l-4 border-l-emerald-500 hover:bg-emerald-500/[0.02] transition-all">
+        <div class="flex justify-between items-start mb-4">
+            <h4 class="text-xl font-bold">Forum API</h4>
+            <i data-lucide="shield-check" class="text-emerald-500 w-6 h-6"></i>
+        </div>
+        <p class="text-slate-500 text-sm mb-6" data-en="RESTful forum backend built with TDD and Clean Architecture for high scalability." data-id="Backend forum RESTful yang dibangun dengan TDD dan Clean Architecture untuk skalabilitas tinggi.">Backend forum RESTful yang dibangun dengan TDD dan Clean Architecture untuk skalabilitas tinggi.</p>
+        <div class="flex gap-2 mb-6">
+            <span class="px-3 py-1 bg-slate-800 text-[10px] text-emerald-400 rounded-full border border-emerald-500/30">Node.js</span>
+            <span class="px-3 py-1 bg-slate-800 text-[10px] text-emerald-400 rounded-full border border-emerald-500/30">PostgreSQL</span>
+            <span class="px-3 py-1 bg-slate-800 text-[10px] text-emerald-400 rounded-full border border-emerald-500/30">TDD</span>
+        </div>
+        <a href="https://github.com/notfound313/forum_api" target="_blank" class="text-emerald-500 font-bold flex items-center gap-2">Explore Repository <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="100" class="group glass p-6 rounded-3xl border-l-4 border-l-emerald-500 hover:bg-emerald-500/[0.02] transition-all">
+        <div class="flex justify-between items-start mb-4">
+            <h4 class="text-xl font-bold">Open Music API</h4>
+            <i data-lucide="music" class="text-emerald-500 w-6 h-6"></i>
+        </div>
+        <p class="text-slate-500 text-sm mb-6" data-en="Comprehensive API for music management, featuring file uploads, playlists, and user likes." data-id="API komprehensif untuk manajemen musik, fitur upload file, playlist, dan like pengguna.">API komprehensif untuk manajemen musik, fitur upload file, playlist, dan like pengguna.</p>
+        <div class="flex gap-2 mb-6">
+            <span class="px-3 py-1 bg-slate-800 text-[10px] text-emerald-400 rounded-full border border-emerald-500/30">Redis</span>
+            <span class="px-3 py-1 bg-slate-800 text-[10px] text-emerald-400 rounded-full border border-emerald-500/30">RabbitMQ</span>
+            <span class="px-3 py-1 bg-slate-800 text-[10px] text-emerald-400 rounded-full border border-emerald-500/30">Node.js</span>
+        </div>
+        <a href="https://github.com/notfound313/api-openmusic" target="_blank" class="text-emerald-500 font-bold flex items-center gap-2">Explore Repository <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-20">
+    <h3 class="flex items-center gap-3 text-2xl font-bold mb-8 text-amber-500" data-aos="fade-right">
+      <i data-lucide="layout"></i> Web Development
+    </h3>
+    <div data-aos="zoom-in" class="group glass p-8 rounded-[2rem] flex flex-col md:flex-row gap-8 items-center border border-amber-500/20">
+      <div class="w-full md:w-1/2 overflow-hidden rounded-2xl">
+        <img src="assets/task-management.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+      </div>
+      <div class="w-full md:w-1/2">
+        <span class="text-amber-500 text-xs font-bold tracking-widest uppercase">Fullstack System</span>
+        <h4 class="text-2xl font-bold mt-2 mb-4">Task Management System</h4>
+        <p class="text-slate-500 dark:text-slate-400 mb-6" data-en="A robust RBAC-based system for internal task tracking between supervisors and staff members." data-id="Sistem berbasis role (RBAC) yang kokoh untuk pelacakan tugas internal antara supervisor dan staf.">Sistem berbasis role (RBAC) yang kokoh untuk pelacakan tugas internal antara supervisor dan staf.</p>
+        <div class="flex gap-3 mb-8">
+            <div class="px-4 py-2 bg-slate-100 dark:bg-slate-800 rounded-xl text-sm font-semibold">Laravel 10</div>
+            <div class="px-4 py-2 bg-slate-100 dark:bg-slate-800 rounded-xl text-sm font-semibold">MySQL</div>
+        </div>
+        <a href="https://github.com/notfound313/wps_inter_maruf" target="_blank" class="px-8 py-3 bg-amber-500 text-white rounded-full font-bold shadow-lg shadow-amber-500/20 inline-block">View GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-20">
+    <h3 class="flex items-center gap-3 text-2xl font-bold mb-8 text-rose-500" data-aos="fade-right">
+      <i data-lucide="gamepad-2"></i> Game Development
+    </h3>
+    <div class="max-w-2xl" data-aos="fade-up">
+      <div class="group relative glass p-8 rounded-3xl overflow-hidden border border-rose-500/20">
+        <div class="absolute -right-12 -bottom-12 w-40 h-40 bg-rose-500/10 rounded-full blur-3xl group-hover:bg-rose-500/20 transition-all"></div>
+        <div class="relative z-10">
+            <h4 class="text-2xl font-bold mb-4 flex items-center gap-3 italic">
+                <i data-lucide="terminal" class="text-rose-500"></i> Battleship CLI Game
+            </h4>
+            <p class="text-slate-500 dark:text-slate-400 mb-6 leading-relaxed" data-en="An OOP-focused command line game. Experience the classic battleship strategy game right in your terminal." data-id="Game berbasis command line dengan fokus pada prinsip OOP. Rasakan strategi battleship klasik langsung di terminal Anda.">Game berbasis command line dengan fokus pada prinsip OOP. Rasakan strategi battleship klasik langsung di terminal Anda.</p>
+            <div class="flex items-center gap-6">
+                <div class="flex gap-2">
+                    <span class="text-xs font-mono px-3 py-1 bg-rose-500/10 text-rose-500 rounded-md">C#</span>
+                    <span class="text-xs font-mono px-3 py-1 bg-slate-500/10 rounded-md">Object Oriented</span>
+                </div>
+                <div class="h-[1px] flex-grow bg-slate-200 dark:bg-slate-800"></div>
+                <a href="https://github.com/notfound313/battle-ship" target="_blank" class="p-4 bg-rose-500 text-white rounded-2xl hover:rotate-12 transition-all shadow-lg shadow-rose-500/20">
+                    <i data-lucide="code-2"></i>
+                </a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
   <footer class="py-12 border-t border-slate-200 dark:border-slate-800 text-center text-slate-500 text-sm">
     <p>© 2026 Muhammad Maruf • Built with Tailwind & Passion</p>
