@@ -153,3 +153,27 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
 }
+/* Efek Glow Modern */
+.card-glow {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(14, 165, 233, 0.1);
+}
+
+.card-glow:hover {
+  transform: translateY(-8px) scale(1.01);
+  /* Glow Biru Samar untuk Light Mode */
+  box-shadow: 0 20px 40px -15px rgba(14, 165, 233, 0.25);
+  border-color: rgba(14, 165, 233, 0.5);
+}
+
+.dark .card-glow:hover {
+  /* Glow Biru Terang untuk Dark Mode */
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.15), 
+              0 10px 40px -10px rgba(56, 189, 248, 0.3);
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+/* Animasi tambahan untuk elemen di dalam kartu saat di-hover */
+.card-glow:hover img {
+  filter: brightness(1.1);
+}
