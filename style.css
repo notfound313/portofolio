@@ -1,7 +1,16 @@
 :root {
+  /* Default (Light Mode) - Biru Samar */
+  --bg: #f0f9ff;      /* Tailwind sky-50: Biru yang sangat lembut */
+  --card: rgba(255, 255, 255, 0.7);
+  --text: #0f172a;    /* Navy gelap agar kontras */
+  --accent: #0ea5e9;  /* Biru cerah */
+}
+
+/* Dark Mode Override */
+.dark {
   --bg: #020617;
-  --card: #020617;
-  --text: #e5e7eb;
+  --card: rgba(15, 23, 42, 0.6);
+  --text: #f8fafc;
   --accent: #38bdf8;
 }
 
@@ -12,10 +21,11 @@
 }
 
 body {
-  background: var(--bg);
+  background-color: var(--bg);
   color: var(--text);
-  font-family: Inter, system-ui, sans-serif;
-  transition: background 0.3s ease, color 0.3s ease;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: background 0.5s ease, color 0.5s ease;
+  margin: 0;
 }
 
 .container {
@@ -78,16 +88,7 @@ body {
   margin-bottom: 1rem;
 }
 
-/* LINKEDIN CARD */
-.linkedin-card {
-  display: block;
-  background: var(--card);
-  border: 1px solid #1e293b;
-  padding: 1.5rem;
-  border-radius: 14px;
-  text-decoration: none;
-  color: var(--text);
-}
+
 
 /* MODAL */
 #modal {
@@ -138,3 +139,17 @@ body {
       z-index: -1;
       opacity: 0.2;
     }
+    .glass {
+  background: rgba(255, 255, 255, 0.4); /* Lebih transparan di light mode */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(14, 165, 233, 0.05); /* Shadow biru tipis */
+}
+
+/* Glass di mode Dark */
+.dark .glass {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}

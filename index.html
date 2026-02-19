@@ -10,20 +10,29 @@
   <script src="https://unpkg.com/lucide@latest"></script>
    <link rel="stylesheet" href="style.css"/>
 </head>
-<body class="bg-slate-50 dark:bg-[#020617] text-slate-900 dark:text-slate-100 transition-colors duration-500 overflow-x-hidden">
+<body class="bg-[var(--bg)] text-slate-900 dark:text-slate-100 transition-colors duration-500 overflow-x-hidden">
 
   <div class="blob top-0 -left-20"></div>
   <div class="blob bottom-0 -right-20 bg-indigo-500"></div>
 
   <nav class="fixed top-0 w-full z-50 glass py-4">
     <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
-      <span class="font-bold text-xl tracking-tighter">M.MARUF</span>
+      <span class="font-bold text-xl tracking-tighter">Not Found 404</span>
       <div class="flex gap-4">
         <button onclick="toggleLanguage()" class="hover:text-sky-400 transition-colors">EN/ID</button>
-        <button onclick="toggleTheme()" class="p-2 rounded-full bg-slate-200 dark:bg-slate-800">
-            <i data-lucide="sun" class="hidden dark:block w-5 h-5"></i>
-            <i data-lucide="moon" class="block dark:hidden w-5 h-5"></i>
-        </button>
+        <button onclick="toggleTheme()" class="relative p-2 rounded-full bg-slate-200 dark:bg-slate-800 hover:ring-2 ring-sky-400 transition-all duration-300 w-10 h-10 flex items-center justify-center overflow-hidden">
+    <i data-lucide="sun" 
+       class="absolute w-5 h-5 transition-all duration-500 transform 
+              dark:scale-100 dark:rotate-0 dark:opacity-100 
+              scale-0 rotate-90 opacity-0 text-yellow-400">
+    </i>
+    
+    <i data-lucide="moon" 
+       class="absolute w-5 h-5 transition-all duration-500 transform 
+              dark:scale-0 dark:-rotate-90 dark:opacity-0 
+              scale-100 rotate-0 opacity-100 text-slate-700">
+    </i>
+</button>
       </div>
     </div>
   </nav>
@@ -31,7 +40,7 @@
   <header class="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-20">
     <div data-aos="zoom-in" class="relative mb-6">
       <div class="absolute inset-0 bg-sky-400 blur-2xl opacity-20 rounded-full animate-pulse"></div>
-      <img src="assets/profile.jpg" alt="Maruf" class="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-sky-500/50 shadow-2xl"/>
+      <img src="assets/profile.png" alt="Maruf" class="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-sky-500/50 shadow-2xl"/>
     </div>
     
     <h1 data-aos="fade-up" class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">
