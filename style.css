@@ -1,9 +1,9 @@
 :root {
   /* Default (Light Mode) - Biru Samar */
-  --bg: #f0f9ff;      /* Tailwind sky-50: Biru yang sangat lembut */
-  --card: rgba(255, 255, 255, 0.7);
-  --text: #0f172a;    /* Navy gelap agar kontras */
-  --accent: #0ea5e9;  /* Biru cerah */
+  --bg: #286086;      /* Tailwind sky-50: Biru yang sangat lembut */
+  --card: rgba(252, 223, 223, 0.7);
+  --text: #0e1527;    /* Navy gelap agar kontras */
+  --accent: #3aa4d4;  /* Biru cerah */
 }
 
 /* Dark Mode Override */
