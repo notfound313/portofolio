@@ -1,13 +1,13 @@
 /* 1. VARIABEL WARNA (Satu Sumber Kebenaran) */
 :root {
   /* Mode Terang (Light) - Biru Samar */
-  --bg: #f0f9ff; 
+  --bg: #7eb7dd; 
   --card: rgba(255, 255, 255, 0.7);
   --text-main: #0f172a;    /* Navy Gelap */
   --text-muted: #475569;  /* Abu-abu */
   --accent: #0ea5e9;      /* Biru Cerah */
   --border: rgba(0, 0, 0, 0.1);
-  --toggle-bg: #e2e8f0;
+  --toggle-bg: #d5dde7;
 }
 
 .dark {
@@ -105,4 +105,8 @@ h1, h2, h3, h4, h5, h6, span, p {
 .profile-pic {
   border: 3px solid var(--accent);
   box-shadow: 0 0 20px var(--accent);
+}
+
+#text-en, #text-id {
+  font-weight: 800;
 }

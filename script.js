@@ -41,31 +41,31 @@ function updateLanguageUI() {
         el.innerText = el.getAttribute(`data-${currentLang}`);
     });
 }
-// Fungsi inisialisasi tema
-function initTheme() {
-    const savedTheme = localStorage.getItem('theme');
-    const html = document.documentElement;
-
-    // Jika ada setting 'light' di storage, baru ubah ke light. 
-    // Jika kosong atau setting-nya 'dark', tetap di dark.
-    if (savedTheme === 'light') {
-        html.classList.remove('dark');
-    } else {
-        html.classList.add('dark');
-        localStorage.setItem('theme', 'dark'); // Set default ke dark di storage
-    }
-    
-    // Jangan lupa render ulang ikon lucide
-    if (window.lucide) {
-        lucide.createIcons();
-    }
-}
-
-// Jalankan fungsi saat halaman dimuat
-initTheme();
-
 function toggleTheme() {
     const html = document.documentElement;
+    const thumb = document.getElementById('theme-thumb');
     const isDark = html.classList.toggle('dark');
+    
+    // Update posisi thumb secara manual untuk memastikan gerakan
+    if (isDark) {
+        thumb.style.transform = 'translateX(32px)'; // Geser kanan (Dark)
+    } else {
+        thumb.style.transform = 'translateX(0px)';  // Geser kiri (Light)
+    }
+    
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
 }
+
+// Jalankan saat load untuk set posisi awal
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    const thumb = document.getElementById('theme-thumb');
+    
+    if (savedTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+        thumb.style.transform = 'translateX(32px)';
+    } else {
+        document.documentElement.classList.remove('dark');
+        thumb.style.transform = 'translateX(0px)';
+    }
+});
