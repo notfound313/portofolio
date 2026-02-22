@@ -1,188 +1,108 @@
+/* 1. VARIABEL WARNA (Satu Sumber Kebenaran) */
 :root {
-  /* Default (Light Mode) - Biru Samar */
-  --bg: #286086;      /* Tailwind sky-50: Biru yang sangat lembut */
-  --card: rgba(252, 223, 223, 0.7);
-  --text: #0e1527;    /* Navy gelap agar kontras */
-  --accent: #3aa4d4;  /* Biru cerah */
+  /* Mode Terang (Light) - Biru Samar */
+  --bg: #f0f9ff; 
+  --card: rgba(255, 255, 255, 0.7);
+  --text-main: #0f172a;    /* Navy Gelap */
+  --text-muted: #475569;  /* Abu-abu */
+  --accent: #0ea5e9;      /* Biru Cerah */
+  --border: rgba(0, 0, 0, 0.1);
+  --toggle-bg: #e2e8f0;
 }
 
-/* Dark Mode Override */
 .dark {
-  --bg: #020617;
+  /* Mode Gelap (Dark) */
+  --bg: #020617;          /* Hitam Navy Sangat Gelap */
   --card: rgba(15, 23, 42, 0.6);
-  --text: #fbfdff;
-  --accent: #38bdf8;
+  --text-main: #f8fafc;   /* Putih Terang (Ini kuncinya!) */
+  --text-muted: #94a3b8;  /* Abu-abu Terang */
+  --accent: #38bdf8;      /* Biru Cyan */
+  --border: rgba(255, 255, 255, 0.1);
+  --toggle-bg: #1e293b;
 }
 
-[data-theme="light"] {
-  --bg: #f8fafc;
-  --card: #ffffff;
-  --text: #020617;
+/* 2. GLOBAL STYLES */
+* {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
 }
 
 body {
   background-color: var(--bg);
-  color: var(--text);
+  color: var(--text-main);
   font-family: 'Plus Jakarta Sans', sans-serif;
-  transition: background 0.5s ease, color 0.5s ease;
   margin: 0;
+  line-height: 1.6;
 }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 3rem 1.5rem;
+/* Memastikan semua heading dan paragraf mengikuti warna tema */
+h1, h2, h3, h4, h5, h6, span, p {
+  color: var(--text-main);
 }
 
-.hero { text-align: center; }
-
-/* PROFILE */
-.profile-pic {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--accent);
-  margin-bottom: 1rem;
+.text-muted {
+  color: var(--text-muted);
 }
 
-/* BUTTON */
-.btn {
-  padding: 0.6rem 1.2rem;
-  border-radius: 999px;
-  border: none;
-  cursor: pointer;
-  background: var(--accent);
-  color: #020617;
-  margin: 0.3rem;
-}
-
-.btn.outline {
-  background: transparent;
-  color: var(--accent);
-  border: 1px solid var(--accent);
-}
-
-/* CARD */
-.card {
+/* 3. GLASSMORPHISM */
+.glass {
   background: var(--card);
-  border: 1px solid #1e293b;
-  border-radius: 14px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.hover {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.hover:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 30px rgba(56,189,248,0.15);
-}
-
-/* PROJECT IMAGE */
-.project-img {
-  width: 100%;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-bottom: 1rem;
-}
-
-
-
-/* MODAL */
-#modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.8);
-}
-#modal img {
-  max-width: 90%;
-  margin: 5% auto;
-  display: block;
-}
-
-/* ANIMATIONS */
-.fade-in { animation: fadeIn 1s ease forwards; }
-.slide-up { animation: slideUp 1s ease forwards; }
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-@keyframes slideUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
- body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    .glass {
-      background: rgba(255, 255, 255, 0.03);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .dark .glass {
-      background: rgba(15, 23, 42, 0.6);
-    }
-    .gradient-text {
-      background: linear-gradient(90deg, #38bdf8, #818cf8);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .blob {
-      position: absolute;
-      width: 300px;
-      height: 300px;
-      background: #38bdf8;
-      filter: blur(80px);
-      border-radius: 50%;
-      z-index: -1;
-      opacity: 0.2;
-    }
-    .glass {
-  background: rgba(255, 255, 255, 0.4); /* Lebih transparan di light mode */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 32px 0 rgba(14, 165, 233, 0.05); /* Shadow biru tipis */
+  border: 1px solid var(--border);
 }
 
-/* Glass di mode Dark */
-.dark .glass {
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+/* 4. BUTTONS & INTERACTIVES */
+.btn-primary {
+  background-color: var(--accent);
+  color: #020617 !important; /* Teks di dalam tombol utama tetap gelap agar terbaca */
+  font-weight: 700;
 }
-/* Efek Glow Modern */
+
+.btn-outline {
+  border: 1px solid var(--accent);
+  color: var(--accent) !important;
+}
+
+/* 5. FIX TOGGLE THEME & LANGUAGE */
+/* Gunakan class ini di div pembungkus toggle kamu */
+.toggle-container {
+  background-color: var(--toggle-bg) !important;
+  border: 1px solid var(--border);
+}
+
+.toggle-thumb {
+  background-color: var(--text-main) !important; /* Thumb mengikuti warna teks agar kontras */
+}
+
+/* 6. CARDS & GLOW */
 .card-glow {
+  background: var(--card);
+  border: 1px solid var(--border);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  border: 1px solid rgba(14, 165, 233, 0.1);
 }
 
 .card-glow:hover {
-  transform: translateY(-8px) scale(1.01);
-  /* Glow Biru Samar untuk Light Mode */
-  box-shadow: 0 20px 40px -15px rgba(14, 165, 233, 0.25);
-  border-color: rgba(14, 165, 233, 0.5);
+  transform: translateY(-8px);
+  border-color: var(--accent);
+  box-shadow: 0 20px 40px -15px rgba(14, 165, 233, 0.2);
 }
 
 .dark .card-glow:hover {
-  /* Glow Biru Terang untuk Dark Mode */
-  box-shadow: 0 0 30px rgba(56, 189, 248, 0.15), 
-              0 10px 40px -10px rgba(56, 189, 248, 0.3);
-  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.1);
 }
 
-/* Animasi tambahan untuk elemen di dalam kartu saat di-hover */
-.card-glow:hover img {
-  filter: brightness(1.1);
+/* 7. ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.dark div[onclick="toggleTheme()"] {
-    box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+.animate-fade {
+  animation: fadeIn 0.8s ease forwards;
 }
 
-div[onclick="toggleTheme()"]:active .absolute {
-    width: 1.75rem; 
+/* Profile Pic Glow */
+.profile-pic {
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 20px var(--accent);
 }
-

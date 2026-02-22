@@ -10,19 +10,19 @@
   <script src="https://unpkg.com/lucide@latest"></script>
    <link rel="stylesheet" href="style.css"/>
 </head>
-<body class="bg-[var(--bg)] text-slate-900 dark:text-slate-100 transition-colors duration-500 overflow-x-hidden">
+<body class="bg-[var(--bg)] text-[var(--text-main)] dark:text-slate-100 transition-colors duration-500 overflow-x-hidden">
 
   <div class="blob top-0 -left-20"></div>
   <div class="blob bottom-0 -right-20 bg-indigo-500"></div>
 
   <nav class="fixed top-0 w-full z-50 glass py-4">
   <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
-    <span class="font-bold text-xl tracking-tighter text-slate-900 dark:text-white">Not Found 404</span>
+    <span class="font-bold text-xl tracking-tighter text-[var(--text-main)] dark:text-white">Not Found 404</span>
 
     <div class="flex items-center gap-4">
       
       <div onclick="toggleLanguage()" 
-           class="relative w-28 h-9 flex items-center bg-slate-200 dark:bg-slate-800 rounded-xl p-1 cursor-pointer select-none border border-black/5 dark:border-white/5 transition-all active:scale-95">
+           class="toggle-container relative w-28 h-9 flex items-center bg-slate-200 dark:bg-slate-800 rounded-xl p-1 cursor-pointer select-none border border-black/5 dark:border-white/5 transition-all active:scale-95">
           
           <div id="lang-slider" 
                class="absolute w-[52px] h-7 bg-white dark:bg-slate-900 rounded-lg shadow-sm transform transition-all duration-300 ease-out translate-x-0">
@@ -35,7 +35,7 @@
       </div>
 
       <div onclick="toggleTheme()" 
-     class="relative w-16 h-8 flex items-center bg-slate-300 dark:bg-sky-600 rounded-full p-1 cursor-pointer transition-all duration-500 shadow-inner group active:scale-90">
+     class="toggle-container relative w-16 h-8 flex items-center bg-slate-300 dark:bg-sky-600 rounded-full p-1 cursor-pointer transition-all duration-500 shadow-inner group active:scale-90">
     
     <div id="theme-thumb"
          class="absolute w-6 h-6 bg-white rounded-full shadow-md transform transition-all duration-500 ease-in-out flex items-center justify-center overflow-hidden dark:translate-x-8">
