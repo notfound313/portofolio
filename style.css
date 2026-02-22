@@ -177,3 +177,11 @@ body {
 .card-glow:hover img {
   filter: brightness(1.1);
 }
+
+.dark div[onclick="toggleTheme()"] {
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+}
+
+div[onclick="toggleTheme()"]:active .absolute {
+    width: 1.75rem; 
+}
