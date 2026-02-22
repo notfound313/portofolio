@@ -46,26 +46,30 @@ function toggleTheme() {
     const thumb = document.getElementById('theme-thumb');
     const isDark = html.classList.toggle('dark');
     
-    // Update posisi thumb secara manual untuk memastikan gerakan
+    // Geser thumb secara manual agar presisi
     if (isDark) {
-        thumb.style.transform = 'translateX(32px)'; // Geser kanan (Dark)
+        thumb.style.transform = 'translateX(32px)';
     } else {
-        thumb.style.transform = 'translateX(0px)';  // Geser kiri (Light)
+        thumb.style.transform = 'translateX(0px)';
     }
     
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    
+    // PAKSA RENDER ULANG IKON
+    setTimeout(() => {
+        lucide.createIcons();
+    }, 10);
 }
 
-// Jalankan saat load untuk set posisi awal
+// Jalankan saat startup
 document.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme') || 'dark';
-    const thumb = document.getElementById('theme-thumb');
-    
     if (savedTheme === 'dark') {
         document.documentElement.classList.add('dark');
-        thumb.style.transform = 'translateX(32px)';
+        document.getElementById('theme-thumb').style.transform = 'translateX(32px)';
     } else {
         document.documentElement.classList.remove('dark');
-        thumb.style.transform = 'translateX(0px)';
+        document.getElementById('theme-thumb').style.transform = 'translateX(0px)';
     }
+    lucide.createIcons();
 });
