@@ -185,3 +185,15 @@ body {
 div[onclick="toggleTheme()"]:active .absolute {
     width: 1.75rem; 
 }
+
+/* Efek saat toggle diklik */
+div[onclick="toggleLanguage()"]:active #lang-slider {
+    scale: 0.95;
+}
+
+/* Memastikan teks ID/EN terlihat tegas */
+#text-en, #text-id {
+    display: inline-block;
+    width: 40px;
+    text-align: center;
+}
