@@ -10,7 +10,7 @@
 .dark {
   --bg: #020617;
   --card: rgba(15, 23, 42, 0.6);
-  --text: #f8fafc;
+  --text: #fbfdff;
   --accent: #38bdf8;
 }
 
@@ -186,14 +186,3 @@ div[onclick="toggleTheme()"]:active .absolute {
     width: 1.75rem; 
 }
 
-/* Efek saat toggle diklik */
-div[onclick="toggleLanguage()"]:active #lang-slider {
-    scale: 0.95;
-}
-
-/* Memastikan teks ID/EN terlihat tegas */
-#text-en, #text-id {
-    display: inline-block;
-    width: 40px;
-    text-align: center;
-}

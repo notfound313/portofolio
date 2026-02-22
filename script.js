@@ -41,25 +41,31 @@ function updateLanguageUI() {
         el.innerText = el.getAttribute(`data-${currentLang}`);
     });
 }
-
-// Jalankan saat pertama kali load agar posisi slider benar
-document.addEventListener('DOMContentLoaded', updateLanguageUI);
-   function toggleTheme() {
+// Fungsi inisialisasi tema
+function initTheme() {
+    const savedTheme = localStorage.getItem('theme');
     const html = document.documentElement;
-    const isDark = html.classList.toggle('dark'); 
+
+    // Jika ada setting 'light' di storage, baru ubah ke light. 
+    // Jika kosong atau setting-nya 'dark', tetap di dark.
+    if (savedTheme === 'light') {
+        html.classList.remove('dark');
+    } else {
+        html.classList.add('dark');
+        localStorage.setItem('theme', 'dark'); // Set default ke dark di storage
+    }
     
-    // Simpan status tema agar tidak reset saat refresh
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    // Jangan lupa render ulang ikon lucide
+    if (window.lucide) {
+        lucide.createIcons();
+    }
 }
 
-// Logika saat halaman baru dibuka (Auto-load tema terakhir)
-(function initTheme() {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
-    } else {
-        document.documentElement.classList.remove('dark');
-    }
-    // Render ulang ikon lucide
-    lucide.createIcons();
-})();
+// Jalankan fungsi saat halaman dimuat
+initTheme();
+
+function toggleTheme() {
+    const html = document.documentElement;
+    const isDark = html.classList.toggle('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+}
